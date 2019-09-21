@@ -17,7 +17,7 @@
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 	<!-- 数据源 -->
-	<context:property-placeholder location="classpath:springxml/jdbc.properties"/>
+	<context:property-placeholder location="classpath:config/db/jdbc.properties"/>
 	<bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">
 		<property name="url" value="${jdbc.jdbcUrl}"></property>
 		<property name="driverClassName" value="${jdbc.driverClass}"></property>
@@ -28,7 +28,7 @@
 	<!-- 配置和Mybatis的整合 -->
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 指定mybatis全局配置文件的位置 -->
-		<property name="configLocation" value="classpath:springxml/mybatis.xml"></property>
+		<property name="configLocation" value="classpath:config/db/mybatis.xml"></property>
 		<!-- 数据源 -->
 		<property name="dataSource" ref="datasource"></property>
 		<!-- 指定mybatis，mapper文件的位置  也可以在mybatis.xml中指定 mapper标签 -->

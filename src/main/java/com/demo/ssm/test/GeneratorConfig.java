@@ -18,7 +18,7 @@ public class GeneratorConfig {
 	public static void main(String[] args) throws Exception {
 		List<String> warnings = new ArrayList<String>();
 		boolean overriter = true;
-		File configFile = new File("src/main/resources/generatorConfig.xml");
+		File configFile = new File("src/main/resources/config/generator/generatorConfig.xml");
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 		Configuration config = cp.parseConfiguration(configFile);
 		DefaultShellCallback callback = new DefaultShellCallback(overriter);
