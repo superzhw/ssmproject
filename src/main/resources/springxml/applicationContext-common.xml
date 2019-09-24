@@ -39,7 +39,7 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- 扫描所有的dao接口实现，加入IOC容器中 -->
 		<property name="basePackage" value="com.demo.ssm.dao"></property>
-	</bean>
+    </bean>
 	
 	<!-- jdbc配置事务管理器 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
