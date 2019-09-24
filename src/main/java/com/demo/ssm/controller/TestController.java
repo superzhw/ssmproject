@@ -1,12 +1,11 @@
 package com.demo.ssm.controller;
 
+import com.demo.ssm.bean.Deptarment;
+import com.demo.ssm.dao.DeptarmentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.demo.ssm.bean.Deptarment;
-import com.demo.ssm.dao.DeptarmentMapper;
 
 @Controller
 @RequestMapping(value = "test",produces = "text/plain;charset=utf-8")
